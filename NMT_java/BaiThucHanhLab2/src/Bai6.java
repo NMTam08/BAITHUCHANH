@@ -1,24 +1,24 @@
 import java.util.Scanner;
-
-import javax.swing.plaf.synth.SynthStyle;
-
 public class Bai6 {
-    public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(System.in);
-        int number, temp = 1;
-        int factorical = 1;
-
+    public static void main(String[] args) {
+        int number, n = 1;
+        int GT = 1;
+         
+        Scanner sc = new Scanner(System.in);
+         
         do {
-            System.out.println("Nhap vao so nguyen duong vao ban phim: ");
-            number = scanner.nextInt();
+            System.out.println("Nhap 1 so: ");
+            number = sc.nextInt();
+        } while (number <= 0);
+         
+        while (n <= number) {
 
-        } while ((number <= 0) || (number > 10));
-
-        while (number >= temp) {
-            factorical *= temp;
-            temp++;
+            GT *= n;
+            n++;
         }
-
-        System.out.println(number + "! = " + factorical);
+         
+        System.out.println(number + "! = " + GT);
+        sc.close();
     }
+ 
 }
